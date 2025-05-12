@@ -1,0 +1,6 @@
+playwright
+beautifulsoup4
+requests
+schedule
+pandas
+openpyxl
