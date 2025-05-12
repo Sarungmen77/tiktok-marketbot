@@ -1,9 +1,14 @@
 services:
   - type: worker
-    name: tiktok-trending-bot
-    env: python
+    name: tiktok-trending-telegram-bot
+    runtime: python
     plan: free
     buildCommand: |
       pip install -r requirements.txt
       playwright install
     startCommand: python tiktok_bot_gmv_excel.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7279588943:AAENa5zL4bhPsQJFtxKD93MYreFqQHHthQQ
+      - key: CHAT_ID
+        value: '6047349188'
